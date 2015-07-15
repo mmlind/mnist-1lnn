@@ -12,6 +12,7 @@
  * Its performance (success rate) of 85% is far off the state-of-the-art techniques (surprise, surprise) 
  * but close the Yann Lecun's 88% when using only a linear classifier.
  *
+ * @see [Simple 1-Layer Neural Network for MNIST Handwriting Recognition](http://mmlind.github.io/Simple_1-Layer_Neural_Network_for_MNIST_Handwriting_Recognition/)
  * @see http://yann.lecun.com/exdb/mnist/
  * @version [Github Project Page](http://github.com/mmlind/mnist-1lnn/)
  * @author [Matt Lind](http://mmlind.github.io)
