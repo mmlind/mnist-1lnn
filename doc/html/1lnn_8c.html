@@ -63,6 +63,9 @@
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ad942555a0acb3ba9caf91fe2863beadb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="1lnn_8c.html#ad942555a0acb3ba9caf91fe2863beadb">getTargetOutput</a> (int targetIndex)</td></tr>
+<tr class="memdesc:ad942555a0acb3ba9caf91fe2863beadb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an output vector with targetIndex set to 1, all others to 0.  <a href="#ad942555a0acb3ba9caf91fe2863beadb">More...</a><br /></td></tr>
+<tr class="separator:ad942555a0acb3ba9caf91fe2863beadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59b9c2dc514c2048bbe84ab8f735f260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="1lnn_8c.html#a59b9c2dc514c2048bbe84ab8f735f260">initLayer</a> (<a class="el" href="struct_layer.html">Layer</a> *l)</td></tr>
 <tr class="memdesc:a59b9c2dc514c2048bbe84ab8f735f260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize layer by setting all weights to random values [0-1].  <a href="#a59b9c2dc514c2048bbe84ab8f735f260">More...</a><br /></td></tr>
 <tr class="separator:a59b9c2dc514c2048bbe84ab8f735f260"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,7 +115,7 @@ Functions</h2></td></tr>
 <p>Calculates a cell's output by suming all input-weight-products. </p>
 <p>Calculates a cell's output by suming all input-weight-products and normalizes to [0-1]. </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00088">88</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00104">104</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -143,7 +146,7 @@ Functions</h2></td></tr>
 <p>Returns the difference between a target value and the cell's ouput. </p>
 <p>Returns the difference between a target value and the cell's ouput </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00106">106</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00122">122</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -164,7 +167,28 @@ Functions</h2></td></tr>
 <p>Returns the index of the cell with the hightest output. </p>
 <p>The output prediction is derived by simply sorting all output values and using the index (=0-9 number) of the highest value as the prediction. </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00046">46</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00062">62</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad942555a0acb3ba9caf91fe2863beadb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vector.html">Vector</a> getTargetOutput </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>targetIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an output vector with targetIndex set to 1, all others to 0. </p>
+<p>Returns an output vector with targetIndex set to 1, all others to 0 </p>
+
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00022">22</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -185,7 +209,7 @@ Functions</h2></td></tr>
 <p>Initialize layer by setting all weights to random values [0-1]. </p>
 <p>Initialize layer by setting all weights to random values [0-1] </p><dl class="section attention"><dt>Attention</dt><dd>It actually makes no difference whether the weights are initialized to a constant (e.g. 0.5) or to a random number. The result (85% success rate) will not change significantly. </dd></dl>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00024">24</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00040">40</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -216,7 +240,7 @@ Functions</h2></td></tr>
 <p>Sets a cell's input according to the pixels of a given MNIST image. </p>
 <p>Creates an input vector of length NUMBER_OF_INPUT_CELLS of a given MNIST image, setting input vector cells to [0,1] based on the pixels of the image. Scalar pixel intensity [=grey-scale] is ignored, only 0 or 1 [=black-white]. </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00073">73</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00089">89</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -253,7 +277,7 @@ Functions</h2></td></tr>
 <p>Performs the testing of the trained network. </p>
 <p>Performs the testing of the trained network Same as training a cell, but without updating weights (learning) </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00153">153</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00169">169</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -290,7 +314,7 @@ Functions</h2></td></tr>
 <p>Performs the training algorithm. </p>
 <p>Performs the training algorithm: feeding input, calculate output, calculate error, update weights) </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00135">135</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00151">151</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>
@@ -321,7 +345,7 @@ Functions</h2></td></tr>
 <p>Updates a cell's weights based on given error and LEARNING_RATE. </p>
 <p>Updates a cell's weights based on given error and LEARNING_RATE </p>
 
-<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00120">120</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
+<p>Definition at line <a class="el" href="1lnn_8c_source.html#l00136">136</a> of file <a class="el" href="1lnn_8c_source.html">1lnn.c</a>.</p>
 
 </div>
 </div>

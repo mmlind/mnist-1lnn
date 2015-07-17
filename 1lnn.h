@@ -59,6 +59,16 @@ struct Vector{
 
 
 /**
+ * @brief Returns an output vector with targetIndex set to 1, all others to 0
+ * @param targetIndex Index of the output that is to be set to 1
+ */
+
+Vector getTargetOutput(int targetIndex);
+
+
+
+
+/**
  * @brief Initialize layer by setting all weights to random values [0-1]
  * @param l A pointer to a NN layer
  */

@@ -14,6 +14,22 @@
 
 
 
+
+/**
+ * @details Returns an output vector with targetIndex set to 1, all others to 0
+ */
+
+Vector getTargetOutput(int targetIndex){
+    Vector v;
+    for (int i=0; i<NUMBER_OF_OUTPUT_CELLS; i++){
+        v.val[i] = (i==targetIndex) ? 1 : 0;
+    }
+    return v;
+}
+
+
+
+
 /**
  * @details Initialize layer by setting all weights to random values [0-1]
  * @attention It actually makes no difference whether the weights are

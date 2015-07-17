@@ -39,24 +39,6 @@
 
 
 /**
- * @brief Returns a vector with all but one values set to "0"
- * @details Set the targetIndex value to "1", all others to "0"
- * @param targetIndex Index of the desired output
- */
-
-Vector getTargetOutput(int targetIndex){
-    Vector v;
-    for (int i=0; i<NUMBER_OF_OUTPUT_CELLS; i++){
-        v.val[i] = (i==targetIndex) ? 1 : 0;
-    }
-    return v;
-}
-
-
-
-
-
-/**
  * @details Trains a layer by looping through and training its cells
  * @param l A pointer to the layer that is to be training
  */

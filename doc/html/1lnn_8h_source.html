@@ -109,110 +109,121 @@
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * @brief Initialize layer by setting all weights to random values [0-1]</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * @param l A pointer to a NN layer</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * @brief Returns an output vector with targetIndex set to 1, all others to 0</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * @param targetIndex Index of the output that is to be set to 1</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a59b9c2dc514c2048bbe84ab8f735f260">initLayer</a>(<a class="code" href="struct_layer.html">Layer</a> *l);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="struct_vector.html">Vector</a> <a class="code" href="1lnn_8h.html#ad942555a0acb3ba9caf91fe2863beadb">getTargetOutput</a>(<span class="keywordtype">int</span> targetIndex);</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * @brief Returns the index of the cell with the hightest output</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"> * @brief Initialize layer by setting all weights to random values [0-1]</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"> * @param l A pointer to a NN layer</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">int</span> <a class="code" href="1lnn_8h.html#ac7c243b1144c180d745ec80d35a7d533">getLayerPrediction</a>(<a class="code" href="struct_layer.html">Layer</a> *l);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a59b9c2dc514c2048bbe84ab8f735f260">initLayer</a>(<a class="code" href="struct_layer.html">Layer</a> *l);</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> * @brief Sets a cell&#39;s input according to the pixels of a given MNIST image</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * @param c A pointer to a cell</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> * @param img A pointer to an MNIST image</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#ac783b69805514de2307463c1eb81ff0b">setCellInput</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <a class="code" href="struct_m_n_i_s_t___image.html">MNIST_Image</a> *img);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment"> * @brief Returns the index of the cell with the hightest output</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"> * @param l A pointer to a NN layer</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">int</span> <a class="code" href="1lnn_8h.html#ac7c243b1144c180d745ec80d35a7d533">getLayerPrediction</a>(<a class="code" href="struct_layer.html">Layer</a> *l);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * @brief Calculates a cell&#39;s output by suming all input-weight-products</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * @param c A cell of a NN layer</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment"> * @brief Sets a cell&#39;s input according to the pixels of a given MNIST image</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"> * @param c A pointer to a cell</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"> * @param img A pointer to an MNIST image</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#ab976665a50c3fffb27b9af148d5e9a54">calcCellOutput</a>(<a class="code" href="struct_cell.html">Cell</a> *c);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#ac783b69805514de2307463c1eb81ff0b">setCellInput</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <a class="code" href="struct_m_n_i_s_t___image.html">MNIST_Image</a> *img);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> * @brief Returns the difference between a target value and the cell&#39;s ouput</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> * @param c The cell whose output is to be compared</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> * @param target The desired value (= correct answer in supervised learning)</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">double</span> <a class="code" href="1lnn_8h.html#ab0d0a10f6294f06efe82bb199b40ab92">getCellError</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <span class="keywordtype">int</span> target);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"> * @brief Calculates a cell&#39;s output by suming all input-weight-products</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"> * @param c A cell of a NN layer</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#ab976665a50c3fffb27b9af148d5e9a54">calcCellOutput</a>(<a class="code" href="struct_cell.html">Cell</a> *c);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> * @brief Updates a cell&#39;s weights based on given error and LEARNING_RATE</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> * @param c The cell whose weights are to be updated.</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> * @param err The error (difference between desired output and actual output</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a4c1307876a6d04d8e21af0812a45ba95">updateCellWeights</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <span class="keywordtype">double</span> err);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="comment"> * @brief Returns the difference between a target value and the cell&#39;s ouput</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"> * @param c The cell whose output is to be compared</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"> * @param target The desired value (= correct answer in supervised learning)</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">double</span> <a class="code" href="1lnn_8h.html#ab0d0a10f6294f06efe82bb199b40ab92">getCellError</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <span class="keywordtype">int</span> target);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * @brief Performs the training algorithm</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> * @param c Pointer to the cell that is to be trained</span></div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> * @param img Pointer to the image that is to be processed</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="comment"> * @param target Desired output value</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"> * @brief Updates a cell&#39;s weights based on given error and LEARNING_RATE</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="comment"> * @param c The cell whose weights are to be updated.</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"> * @param err The error (difference between desired output and actual output</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a4c1307876a6d04d8e21af0812a45ba95">updateCellWeights</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <span class="keywordtype">double</span> err);</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a6a095ee14356c50fca305c3bd071824d">trainCell</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <a class="code" href="struct_m_n_i_s_t___image.html">MNIST_Image</a> *img, <span class="keywordtype">int</span> target);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"></span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * @brief Performs the testing of the trained network</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> * @param c Pointer to the cell that is to be trained</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"> * @param img Pointer to the image that is to be processed</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment"> * @param target Desired output value</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="comment"> * @brief Performs the training algorithm</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="comment"> * @param c Pointer to the cell that is to be trained</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="comment"> * @param img Pointer to the image that is to be processed</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="comment"> * @param target Desired output value</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a6a095ee14356c50fca305c3bd071824d">trainCell</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <a class="code" href="struct_m_n_i_s_t___image.html">MNIST_Image</a> *img, <span class="keywordtype">int</span> target);</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a07c565449ac521ab836ec14629d93777">testCell</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <a class="code" href="struct_m_n_i_s_t___image.html">MNIST_Image</a> *img, <span class="keywordtype">int</span> target);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment"></span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="comment"> * @brief Performs the testing of the trained network</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="comment"> * @param c Pointer to the cell that is to be trained</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="comment"> * @param img Pointer to the image that is to be processed</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="comment"> * @param target Desired output value</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keywordtype">void</span> <a class="code" href="1lnn_8h.html#a07c565449ac521ab836ec14629d93777">testCell</a>(<a class="code" href="struct_cell.html">Cell</a> *c, <a class="code" href="struct_m_n_i_s_t___image.html">MNIST_Image</a> *img, <span class="keywordtype">int</span> target);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="ttc" id="struct_layer_html_a81b7b27d52b54036203dea3674a5091b"><div class="ttname"><a href="struct_layer.html#a81b7b27d52b54036203dea3674a5091b">Layer::cell</a></div><div class="ttdeci">Cell cell[NUMBER_OF_OUTPUT_CELLS]</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00044">1lnn.h:44</a></div></div>
 <div class="ttc" id="struct_vector_html"><div class="ttname"><a href="struct_vector.html">Vector</a></div><div class="ttdoc">Data structure containing defined number of integer values (the output vector contains values for 0-9...</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00054">1lnn.h:54</a></div></div>
-<div class="ttc" id="1lnn_8h_html_ac7c243b1144c180d745ec80d35a7d533"><div class="ttname"><a href="1lnn_8h.html#ac7c243b1144c180d745ec80d35a7d533">getLayerPrediction</a></div><div class="ttdeci">int getLayerPrediction(Layer *l)</div><div class="ttdoc">Returns the index of the cell with the hightest output. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00046">1lnn.c:46</a></div></div>
-<div class="ttc" id="1lnn_8h_html_ab976665a50c3fffb27b9af148d5e9a54"><div class="ttname"><a href="1lnn_8h.html#ab976665a50c3fffb27b9af148d5e9a54">calcCellOutput</a></div><div class="ttdeci">void calcCellOutput(Cell *c)</div><div class="ttdoc">Calculates a cell&#39;s output by suming all input-weight-products. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00088">1lnn.c:88</a></div></div>
+<div class="ttc" id="1lnn_8h_html_ac7c243b1144c180d745ec80d35a7d533"><div class="ttname"><a href="1lnn_8h.html#ac7c243b1144c180d745ec80d35a7d533">getLayerPrediction</a></div><div class="ttdeci">int getLayerPrediction(Layer *l)</div><div class="ttdoc">Returns the index of the cell with the hightest output. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00062">1lnn.c:62</a></div></div>
+<div class="ttc" id="1lnn_8h_html_ab976665a50c3fffb27b9af148d5e9a54"><div class="ttname"><a href="1lnn_8h.html#ab976665a50c3fffb27b9af148d5e9a54">calcCellOutput</a></div><div class="ttdeci">void calcCellOutput(Cell *c)</div><div class="ttdoc">Calculates a cell&#39;s output by suming all input-weight-products. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00104">1lnn.c:104</a></div></div>
+<div class="ttc" id="1lnn_8h_html_ad942555a0acb3ba9caf91fe2863beadb"><div class="ttname"><a href="1lnn_8h.html#ad942555a0acb3ba9caf91fe2863beadb">getTargetOutput</a></div><div class="ttdeci">Vector getTargetOutput(int targetIndex)</div><div class="ttdoc">Returns an output vector with targetIndex set to 1, all others to 0. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00022">1lnn.c:22</a></div></div>
 <div class="ttc" id="struct_cell_html_aa6231a5027112a1cf56c610e6d7d91c5"><div class="ttname"><a href="struct_cell.html#aa6231a5027112a1cf56c610e6d7d91c5">Cell::bias</a></div><div class="ttdeci">double bias</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00033">1lnn.h:33</a></div></div>
-<div class="ttc" id="1lnn_8h_html_a07c565449ac521ab836ec14629d93777"><div class="ttname"><a href="1lnn_8h.html#a07c565449ac521ab836ec14629d93777">testCell</a></div><div class="ttdeci">void testCell(Cell *c, MNIST_Image *img, int target)</div><div class="ttdoc">Performs the testing of the trained network. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00153">1lnn.c:153</a></div></div>
-<div class="ttc" id="1lnn_8h_html_a6a095ee14356c50fca305c3bd071824d"><div class="ttname"><a href="1lnn_8h.html#a6a095ee14356c50fca305c3bd071824d">trainCell</a></div><div class="ttdeci">void trainCell(Cell *c, MNIST_Image *img, int target)</div><div class="ttdoc">Performs the training algorithm. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00135">1lnn.c:135</a></div></div>
+<div class="ttc" id="1lnn_8h_html_a07c565449ac521ab836ec14629d93777"><div class="ttname"><a href="1lnn_8h.html#a07c565449ac521ab836ec14629d93777">testCell</a></div><div class="ttdeci">void testCell(Cell *c, MNIST_Image *img, int target)</div><div class="ttdoc">Performs the testing of the trained network. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00169">1lnn.c:169</a></div></div>
+<div class="ttc" id="1lnn_8h_html_a6a095ee14356c50fca305c3bd071824d"><div class="ttname"><a href="1lnn_8h.html#a6a095ee14356c50fca305c3bd071824d">trainCell</a></div><div class="ttdeci">void trainCell(Cell *c, MNIST_Image *img, int target)</div><div class="ttdoc">Performs the training algorithm. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00151">1lnn.c:151</a></div></div>
 <div class="ttc" id="struct_cell_html_a47943f73244ca117fa9bf9234cbed317"><div class="ttname"><a href="struct_cell.html#a47943f73244ca117fa9bf9234cbed317">Cell::output</a></div><div class="ttdeci">double output</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00032">1lnn.h:32</a></div></div>
-<div class="ttc" id="1lnn_8h_html_a59b9c2dc514c2048bbe84ab8f735f260"><div class="ttname"><a href="1lnn_8h.html#a59b9c2dc514c2048bbe84ab8f735f260">initLayer</a></div><div class="ttdeci">void initLayer(Layer *l)</div><div class="ttdoc">Initialize layer by setting all weights to random values [0-1]. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00024">1lnn.c:24</a></div></div>
+<div class="ttc" id="1lnn_8h_html_a59b9c2dc514c2048bbe84ab8f735f260"><div class="ttname"><a href="1lnn_8h.html#a59b9c2dc514c2048bbe84ab8f735f260">initLayer</a></div><div class="ttdeci">void initLayer(Layer *l)</div><div class="ttdoc">Initialize layer by setting all weights to random values [0-1]. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00040">1lnn.c:40</a></div></div>
 <div class="ttc" id="1lnn_8h_html_a748e27ebfa45581f8126cd56984f1674"><div class="ttname"><a href="1lnn_8h.html#a748e27ebfa45581f8126cd56984f1674">NUMBER_OF_OUTPUT_CELLS</a></div><div class="ttdeci">#define NUMBER_OF_OUTPUT_CELLS</div><div class="ttdoc">use 10 output cells to model 10 digits (0-9) </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00012">1lnn.h:12</a></div></div>
 <div class="ttc" id="struct_cell_html"><div class="ttname"><a href="struct_cell.html">Cell</a></div><div class="ttdoc">Core unit of the neural network (neuron and synapses) </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00029">1lnn.h:29</a></div></div>
 <div class="ttc" id="struct_layer_html"><div class="ttname"><a href="struct_layer.html">Layer</a></div><div class="ttdoc">The single (output) layer of this network (a layer is number cells) </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00043">1lnn.h:43</a></div></div>
 <div class="ttc" id="struct_cell_html_a7e01fa6f3f64477bd03313b01654b18a"><div class="ttname"><a href="struct_cell.html#a7e01fa6f3f64477bd03313b01654b18a">Cell::weight</a></div><div class="ttdeci">double weight[NUMBER_OF_INPUT_CELLS]</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00031">1lnn.h:31</a></div></div>
-<div class="ttc" id="1lnn_8h_html_ab0d0a10f6294f06efe82bb199b40ab92"><div class="ttname"><a href="1lnn_8h.html#ab0d0a10f6294f06efe82bb199b40ab92">getCellError</a></div><div class="ttdeci">double getCellError(Cell *c, int target)</div><div class="ttdoc">Returns the difference between a target value and the cell&#39;s ouput. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00106">1lnn.c:106</a></div></div>
+<div class="ttc" id="1lnn_8h_html_ab0d0a10f6294f06efe82bb199b40ab92"><div class="ttname"><a href="1lnn_8h.html#ab0d0a10f6294f06efe82bb199b40ab92">getCellError</a></div><div class="ttdeci">double getCellError(Cell *c, int target)</div><div class="ttdoc">Returns the difference between a target value and the cell&#39;s ouput. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00122">1lnn.c:122</a></div></div>
 <div class="ttc" id="1lnn_8h_html_a56bf5faa228333a3b32fbe2471a562b3"><div class="ttname"><a href="1lnn_8h.html#a56bf5faa228333a3b32fbe2471a562b3">NUMBER_OF_INPUT_CELLS</a></div><div class="ttdeci">#define NUMBER_OF_INPUT_CELLS</div><div class="ttdoc">use 28*28 input cells (= number of pixels per MNIST image) </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00011">1lnn.h:11</a></div></div>
 <div class="ttc" id="struct_vector_html_a015421e2c80718950f464d212f01496f"><div class="ttname"><a href="struct_vector.html#a015421e2c80718950f464d212f01496f">Vector::val</a></div><div class="ttdeci">int val[NUMBER_OF_OUTPUT_CELLS]</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00055">1lnn.h:55</a></div></div>
 <div class="ttc" id="struct_cell_html_a3c8c3ee74409e582f979cacee5feff7c"><div class="ttname"><a href="struct_cell.html#a3c8c3ee74409e582f979cacee5feff7c">Cell::input</a></div><div class="ttdeci">double input[NUMBER_OF_INPUT_CELLS]</div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8h_source.html#l00030">1lnn.h:30</a></div></div>
-<div class="ttc" id="1lnn_8h_html_a4c1307876a6d04d8e21af0812a45ba95"><div class="ttname"><a href="1lnn_8h.html#a4c1307876a6d04d8e21af0812a45ba95">updateCellWeights</a></div><div class="ttdeci">void updateCellWeights(Cell *c, double err)</div><div class="ttdoc">Updates a cell&#39;s weights based on given error and LEARNING_RATE. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00120">1lnn.c:120</a></div></div>
+<div class="ttc" id="1lnn_8h_html_a4c1307876a6d04d8e21af0812a45ba95"><div class="ttname"><a href="1lnn_8h.html#a4c1307876a6d04d8e21af0812a45ba95">updateCellWeights</a></div><div class="ttdeci">void updateCellWeights(Cell *c, double err)</div><div class="ttdoc">Updates a cell&#39;s weights based on given error and LEARNING_RATE. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00136">1lnn.c:136</a></div></div>
 <div class="ttc" id="struct_m_n_i_s_t___image_html"><div class="ttname"><a href="struct_m_n_i_s_t___image.html">MNIST_Image</a></div><div class="ttdoc">Data block defining a MNIST image. </div><div class="ttdef"><b>Definition:</b> <a href="mnist-utils_8h_source.html#l00040">mnist-utils.h:40</a></div></div>
-<div class="ttc" id="1lnn_8h_html_ac783b69805514de2307463c1eb81ff0b"><div class="ttname"><a href="1lnn_8h.html#ac783b69805514de2307463c1eb81ff0b">setCellInput</a></div><div class="ttdeci">void setCellInput(Cell *c, MNIST_Image *img)</div><div class="ttdoc">Sets a cell&#39;s input according to the pixels of a given MNIST image. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00073">1lnn.c:73</a></div></div>
+<div class="ttc" id="1lnn_8h_html_ac783b69805514de2307463c1eb81ff0b"><div class="ttname"><a href="1lnn_8h.html#ac783b69805514de2307463c1eb81ff0b">setCellInput</a></div><div class="ttdeci">void setCellInput(Cell *c, MNIST_Image *img)</div><div class="ttdoc">Sets a cell&#39;s input according to the pixels of a given MNIST image. </div><div class="ttdef"><b>Definition:</b> <a href="1lnn_8c_source.html#l00089">1lnn.c:89</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
